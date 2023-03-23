@@ -1,0 +1,18 @@
+.headerContainer {
+  background-color: var(--dark-grey);
+  height: 180px;
+}
+
+.logoContainer {
+  position: relative;
+  overflow: hidden;
+  width: 350px;
+  height: 180px;
+}
+
+.logo {
+  position: absolute;
+  top: -100px;
+  width: 350px;
+  height: 300px;
+}

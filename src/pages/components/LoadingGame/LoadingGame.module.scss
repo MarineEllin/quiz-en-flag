@@ -1,0 +1,52 @@
+.loadingGame {
+  background-color: var(--dark-grey);
+  border-radius: var(--border-radius);
+  max-width: 350px;
+  height: calc(100vh - 300px);
+  position: fixed;
+  .flagsHeartContainer {
+    height: 250px;
+    width: 250px;
+    img {
+      margin: 30px 0;
+      max-height: 250px;
+      max-width: 250px;
+      animation-name: logo;
+      animation-iteration-count: infinite;
+      animation-duration: 5s;
+    }
+  }
+}
+
+@keyframes logo {
+  0% {
+    transform: rotate(0);
+  }
+  40% {
+    transform: rotate(0);
+  }
+  42% {
+    transform: rotate(6deg);
+  }
+  44% {
+    transform: rotate(-6deg);
+  }
+  46% {
+    transform: rotate(4deg);
+  }
+  48% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  52% {
+    transform: rotate(-2deg);
+  }
+  54% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}

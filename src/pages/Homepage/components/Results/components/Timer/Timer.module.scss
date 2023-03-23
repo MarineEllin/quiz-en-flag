@@ -1,0 +1,71 @@
+.timerBackground {
+  position: relative;
+  z-index: 1;
+  border: 5px solid var(--mid-grey);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+}
+.addingTimeScore {
+  animation-name: addingTimeScore;
+  animation-duration: 1s;
+}
+
+@keyframes addingTimeScore {
+  0% {
+    border: 5px solid var(--mid-grey);
+  }
+  64% {
+    border: 5px solid var(--mid-grey);
+  }
+  65% {
+    border: 5px solid var(--green);
+  }
+  99% {
+    border: 5px solid var(--green);
+  }
+  100% {
+    border: 5px solid var(--mid-grey);
+  }
+}
+
+.timerProgress {
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+  background-color: var(--peps);
+}
+
+.timer {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  line-height: 60px;
+  text-align: center;
+  z-index: 1;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--dark-grey);
+}
+
+.alert {
+  background-color: var(--red);
+  animation-name: alert;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes alert {
+  0% {
+    background-color: rgba(221, 117, 31, 1);
+  }
+  25% {
+    background-color: rgba(221, 117, 31, 0.5);
+  }
+  50% {
+    background-color: rgba(221, 117, 31, 1);
+  }
+  100% {
+    background-color: rgba(221, 117, 31, 0.5);
+  }
+}

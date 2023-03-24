@@ -10,4 +10,5 @@ export class Constants {
   static ANIMATION_ANSWERS_IN_OUT = 500;
   static TIMER_ALERT = 10000;
   static CONVERT_MS_AND_S = 1000;
+  static TIMEOUT_NEW_FLAG = 100;
 }

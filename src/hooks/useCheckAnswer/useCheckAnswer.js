@@ -26,24 +26,30 @@ export function useCheckAnswer(e) {
       setScore(score + 1);
       setAddTimeRightAnswer(true);
       setTimeout(() => {
+        setCountries([...countries].sort((a, b) => 0.5 - Math.random()));
         e.target.classList.remove("rightAnswer");
         setAnimateFlags(false);
         setAnimateAnswers(false);
-        setCountries([...countries].sort((a, b) => 0.5 - Math.random()));
       }, Constants.TIMER_RIGHT_ANSWER);
+      setTimeout(() => {
+        setAnimateFlags(true);
+        setAnimateAnswers(true);
+      }, Constants.TIMEOUT_NEW_FLAG);
     } else {
       e.target.classList.add("wrongAnswer");
       displayRightAnswer(true);
       setTimeout(() => {
+        setCountries([...countries].sort((a, b) => 0.5 - Math.random()));
         e.target.classList.remove("wrongAnswer");
         displayRightAnswer(false);
         setAnimateFlags(false);
         setAnimateAnswers(false);
-        setCountries([...countries].sort((a, b) => 0.5 - Math.random()));
       }, Constants.TIMER_WRONG_ANSWER);
     }
   }
+
   setAnimateFlags(true);
   setAnimateAnswers(true);
+
   return checkAnswer;
 }

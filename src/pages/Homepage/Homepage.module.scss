@@ -2,7 +2,8 @@
 
 .homepageContainer {
   @include mixin.xs {
-    flex: 0 0 auto;
+    flex: none;
+    overflow-y: hidden;
   }
   .flagAnswersContent {
     background-color: white;
@@ -11,7 +12,7 @@
     width: 450px;
     overflow: hidden;
     @include mixin.xs {
-      flex: 0 0 auto;
+      flex: none;
       width: 300px;
     }
   }

@@ -1,8 +1,17 @@
+@use "assets/styles/mixins" as mixin;
+
 .flagsContainer {
   height: 150px;
   width: 150px;
+  @include mixin.xs {
+    height: 100px;
+    width: 100px;
+  }
 }
 
 .flags {
   max-height: 150px;
+  @include mixin.xs {
+    max-height: 100px;
+  }
 }

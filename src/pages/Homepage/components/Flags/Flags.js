@@ -9,7 +9,7 @@ function Flags() {
 
   return (
     <AnimationFlags in={animateFlags}>
-      <div className={`${styles.flagsContainer} my-30`}>
+      <div className={`${styles.flagsContainer} my-20`}>
         <img
           src={"/flags/" + country[0] + ".png"}
           alt="flag"

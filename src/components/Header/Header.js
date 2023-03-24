@@ -8,9 +8,7 @@ function Header() {
     <div
       className={`${styles.headerContainer} d-flex flex-column align-items-center py-20`}
     >
-      <div className={styles.logoContainer}>
-        <img className={styles.logo} src="/logo.jpeg" alt="logo" />
-      </div>
+      <img className={`${styles.logo} my-20`} src="/logo.jpeg" alt="logo" />
       <button onClick={() => setLoadingGame(true)} className="btn">
         Recommencer
       </button>

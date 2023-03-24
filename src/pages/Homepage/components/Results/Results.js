@@ -11,27 +11,23 @@ function Results() {
 
   return (
     <div
-      className={`${styles.resultsContainer} d-flex flex-column align-items-center mb-20`}
+      className={`${styles.resultsContainer} d-flex space-evenly align-items-center mb-20`}
     >
       <div
-        className={`${styles.scoreTimerContent} d-flex flex-row space-evenly`}
+        className={`${styles.score} d-flex flex-column justify-content-center align-items-center`}
       >
-        <div
-          className={`${styles.score} d-flex flex-column justify-content-center align-items-center mb-20`}
-        >
-          <div>{score}</div>
-        </div>
-        <div
-          className={`${styles.timer} d-flex flex-column justify-content-center align-items-center mb-20`}
-        >
-          <Timer />
-        </div>
-        {addingTime && (
-          <div className={styles.addingTimeStar}>
-            +{Constants.TIMER_INCREASE_GOOD_ANSWER / 1000}s
-          </div>
-        )}
+        {score}
       </div>
+      <div
+        className={`${styles.timer} d-flex flex-column justify-content-center align-items-center`}
+      >
+        <Timer />
+      </div>
+      {addingTime && (
+        <div className={styles.addingTimeStar}>
+          +{Constants.TIMER_INCREASE_GOOD_ANSWER / Constants.CONVERT_MS_AND_S}s
+        </div>
+      )}
     </div>
   );
 }

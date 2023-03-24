@@ -13,7 +13,9 @@ function Homepage() {
   const timeout = useRecoilValue(timeoutState);
 
   return (
-    <div className="d-flex flex-column align-items-center justify-content-center">
+    <div
+      className={`${styles.homepageContainer} d-flex flex-fill flex-column align-items-center justify-content-center py-20`}
+    >
       {loadingGame ? (
         <LoadingGame />
       ) : timeout ? (

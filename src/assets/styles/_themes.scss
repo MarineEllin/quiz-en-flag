@@ -1,5 +1,7 @@
+@use "assets/styles/mixins" as mixin;
+
 .btn {
-  width: 300px;
+  width: 410px;
   cursor: pointer;
   font-size: 1.4rem;
   border-radius: var(--border-radius);
@@ -7,6 +9,10 @@
   background-color: var(--peps);
   border: 6px solid var(--peps);
   color: var(--dark-peps);
+  @include mixin.xs {
+    width: 260px;
+    font-size: 1rem;
+  }
 }
 
 .peps {

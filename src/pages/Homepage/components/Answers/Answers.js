@@ -22,7 +22,7 @@ function Answers() {
 
   return (
     <AnimationAnswers in={animateAnswers}>
-      <div className="d-flex flex-column mb-20">
+      <div className="d-flex flex-column">
         <button
           onClick={checkAnswer}
           className={`${

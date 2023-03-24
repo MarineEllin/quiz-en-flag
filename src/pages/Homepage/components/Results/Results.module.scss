@@ -1,10 +1,11 @@
+@use "assets/styles/mixins" as mixin;
+
 .resultsContainer {
   position: relative;
-  width: 350px;
-}
-
-.scoreTimerContent {
-  width: 350px;
+  max-width: 450px;
+  @include mixin.xs {
+    max-width: 300px;
+  }
 }
 
 .score {

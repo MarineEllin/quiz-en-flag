@@ -12,7 +12,7 @@
 .logo {
   width: 410px;
   @include mixin.xs {
-    width: 100px;
+    width: 150px;
     margin: 10px 0;
   }
 }

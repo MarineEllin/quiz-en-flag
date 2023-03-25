@@ -1,18 +1,12 @@
 @use "assets/styles/mixins" as mixin;
 
 .homepageContainer {
-  @include mixin.xs {
-    flex: none;
-    overflow-y: hidden;
-  }
   .flagAnswersContent {
     background-color: white;
     border: 3px solid var(--peps);
     border-radius: var(--border-radius);
     width: 450px;
-    overflow: hidden;
     @include mixin.xs {
-      flex: none;
       width: 300px;
     }
   }

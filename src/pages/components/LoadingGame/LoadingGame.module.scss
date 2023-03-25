@@ -6,8 +6,6 @@
   max-width: 450px;
   @include mixin.xs {
     max-width: 300px;
-    flex: none;
-    overflow-y: hidden;
   }
   .heartContainer {
     max-width: 250px;

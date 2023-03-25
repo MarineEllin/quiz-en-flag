@@ -4,7 +4,7 @@
   background-color: var(--dark-grey);
   color: var(--light-grey);
   font-size: 0.8rem;
-  @include mixin.xs {
-    display: none;
-  }
+  // @include mixin.xs {
+  //   display: none;
+  // }
 }

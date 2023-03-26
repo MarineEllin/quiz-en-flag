@@ -3,9 +3,6 @@
 .resultsContainer {
   position: relative;
   max-width: 450px;
-  @include mixin.xs {
-    max-width: 300px;
-  }
 }
 
 .score {

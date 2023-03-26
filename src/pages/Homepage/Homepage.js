@@ -24,10 +24,14 @@ function Homepage() {
         <div>
           <Results />
           <div
-            className={`${styles.flagAnswersContent} d-flex flex-column justify-content-center align-items-center my-20`}
+            className={`${styles.flagAnswersContainer} d-flex flex-column justify-content-center align-items-center my-20`}
           >
-            <Flags />
-            <Answers />
+            <div
+              className={`${styles.flagAnswersContent} d-flex flex-column justify-content-center align-items-center my-20`}
+            >
+              <Flags />
+              <Answers />
+            </div>
           </div>
         </div>
       )}

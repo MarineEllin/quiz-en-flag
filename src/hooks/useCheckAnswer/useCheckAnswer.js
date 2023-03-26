@@ -26,30 +26,35 @@ export function useCheckAnswer(e) {
       setScore(score + 1);
       setAddTimeRightAnswer(true);
       setTimeout(() => {
-        setCountries([...countries].sort((a, b) => 0.5 - Math.random()));
-        e.target.classList.remove("rightAnswer");
         setAnimateFlags(false);
         setAnimateAnswers(false);
+        e.target.classList.remove("rightAnswer");
       }, Constants.TIMER_RIGHT_ANSWER);
       setTimeout(() => {
-        setAnimateFlags(true);
+        setCountries([...countries].sort((a, b) => 0.5 - Math.random()));
+      }, Constants.TIMER_RIGHT_ANSWER + Constants.ANIMATION_FLAGS_IN_OUT);
+      setTimeout(() => {
         setAnimateAnswers(true);
-      }, Constants.TIMEOUT_NEW_FLAG);
+        setAnimateFlags(true);
+      }, Constants.TIMER_RIGHT_ANSWER + Constants.ANIMATION_FLAGS_IN_OUT + 100);
     } else {
       e.target.classList.add("wrongAnswer");
       displayRightAnswer(true);
       setTimeout(() => {
-        setCountries([...countries].sort((a, b) => 0.5 - Math.random()));
-        e.target.classList.remove("wrongAnswer");
-        displayRightAnswer(false);
         setAnimateFlags(false);
         setAnimateAnswers(false);
+        e.target.classList.remove("wrongAnswer");
+        displayRightAnswer(false);
       }, Constants.TIMER_WRONG_ANSWER);
+      setTimeout(() => {
+        setCountries([...countries].sort((a, b) => 0.5 - Math.random()));
+      }, Constants.TIMER_WRONG_ANSWER + Constants.ANIMATION_FLAGS_IN_OUT);
+      setTimeout(() => {
+        setAnimateAnswers(true);
+        setAnimateFlags(true);
+      }, Constants.TIMER_WRONG_ANSWER + Constants.ANIMATION_FLAGS_IN_OUT + 100);
     }
   }
-
-  setAnimateFlags(true);
-  setAnimateAnswers(true);
 
   return checkAnswer;
 }

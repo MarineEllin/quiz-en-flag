@@ -9,30 +9,30 @@ export const countriesState = atom({
   default: countries,
 });
 
-export const selectedCountry = selector({
-  key: "selectedCountry",
+export const selectedCountryState = selector({
+  key: "selectedCountryState",
   get: ({ get }) => {
-    const [...countriesList] = get(countriesState);
-    const shuffledCountries = countriesList.sort((a, b) => 0.5 - Math.random());
-    return shuffledCountries[0];
+    const [...countries] = get(countriesState);
+    const selectedCountrie =
+      countries[Math.floor(countries.length * Math.random())];
+    return selectedCountrie;
   },
 });
 
 export const possibleAnswersState = selector({
   key: "possibleAnswersState",
   get: ({ get }) => {
-    const country = get(selectedCountry);
-    const countriesWithoutCountrySelectect = countries.filter(
-      (c) => c !== country
-    );
-    const shuffledArray = countriesWithoutCountrySelectect.sort(
-      (a, b) => 0.5 - Math.random()
-    );
-    const possibleAnswers = [
-      shuffledArray[0][1],
-      shuffledArray[1][1],
-      country[1],
+    const selectedCountry = get(selectedCountryState);
+
+    const answer1 = [...countries].filter((c) => c !== selectedCountry)[
+      Math.floor(countries.length * Math.random())
     ];
+
+    const answer2 = [...countries].filter(
+      (c) => c !== selectedCountry && c !== answer1
+    )[Math.floor(countries.length * Math.random())];
+
+    const possibleAnswers = [selectedCountry, answer1, answer2];
     const shuffledPossibleAnswers = possibleAnswers.sort(
       (a, b) => 0.5 - Math.random()
     );

@@ -7,16 +7,16 @@ import {
   countriesState,
   displayRightAnswerState,
   scoreState,
-  selectedCountry,
+  selectedCountryState,
 } from "recoilState/atom";
 
 export function useCheckAnswer(e) {
-  const country = useRecoilValue(selectedCountry);
+  const country = useRecoilValue(selectedCountryState);
   const [countries, setCountries] = useRecoilState(countriesState);
   const setAnimateFlags = useSetRecoilState(animateFlagsState);
   const setAnimateAnswers = useSetRecoilState(animateAnswersState);
   const [score, setScore] = useRecoilState(scoreState);
-  const rightAnswer = country[1];
+  const rightAnswer = country.fr;
   const displayRightAnswer = useSetRecoilState(displayRightAnswerState);
   const setAddTimeRightAnswer = useSetRecoilState(addTimeRightAnswerState);
 

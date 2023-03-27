@@ -36,7 +36,7 @@ export function useCheckAnswer(e) {
       setTimeout(() => {
         setAnimateAnswers(true);
         setAnimateFlags(true);
-      }, Constants.TIMER_RIGHT_ANSWER + Constants.ANIMATION_FLAGS_IN_OUT + 100);
+      }, Constants.TIMER_RIGHT_ANSWER + Constants.ANIMATION_FLAGS_IN_OUT + Constants.TIMEOUT_NEW_FLAG);
     } else {
       e.target.classList.add("wrongAnswer");
       displayRightAnswer(true);
@@ -52,7 +52,7 @@ export function useCheckAnswer(e) {
       setTimeout(() => {
         setAnimateAnswers(true);
         setAnimateFlags(true);
-      }, Constants.TIMER_WRONG_ANSWER + Constants.ANIMATION_FLAGS_IN_OUT + 100);
+      }, Constants.TIMER_WRONG_ANSWER + Constants.ANIMATION_FLAGS_IN_OUT + Constants.TIMEOUT_NEW_FLAG);
     }
   }
 

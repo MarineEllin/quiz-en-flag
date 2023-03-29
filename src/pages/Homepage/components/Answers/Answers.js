@@ -5,6 +5,7 @@ import {
   possibleAnswersState,
   displayRightAnswerState,
   selectedCountryState,
+  languageState,
 } from "../../../../recoilState/atom";
 import { useCheckAnswer } from "../../../../hooks/useCheckAnswer/useCheckAnswer";
 
@@ -13,12 +14,9 @@ function Answers() {
   const country = useRecoilValue(selectedCountryState);
   const animateAnswers = useRecoilValue(animateAnswersState);
   const displayRightAnswer = useRecoilValue(displayRightAnswerState);
+  const language = useRecoilValue(languageState);
 
   const possibleAnswers = useRecoilValue(possibleAnswersState);
-
-  const button0 = possibleAnswers[0].fr;
-  const button1 = possibleAnswers[1].fr;
-  const button2 = possibleAnswers[2].fr;
 
   return (
     <AnimationAnswers in={animateAnswers}>
@@ -26,30 +24,42 @@ function Answers() {
         <button
           onClick={checkAnswer}
           className={`${
-            displayRightAnswer && button0 === country.fr ? "rightAnswer" : ""
+            displayRightAnswer && possibleAnswers[0] === country
+              ? "rightAnswer"
+              : ""
           } btn mb-20 
         `}
-          value={button0}
+          value={`${
+            language === "fr" ? possibleAnswers[0].fr : possibleAnswers[0].en
+          }`}
         >
-          {button0}
+          {language === "fr" ? possibleAnswers[0].fr : possibleAnswers[0].en}
         </button>
         <button
           onClick={checkAnswer}
           className={`${
-            displayRightAnswer && button1 === country.fr ? "rightAnswer" : ""
+            displayRightAnswer && possibleAnswers[1] === country
+              ? "rightAnswer"
+              : ""
           } btn mb-20 flex-fill`}
-          value={button1}
+          value={`${
+            language === "fr" ? possibleAnswers[1].fr : possibleAnswers[1].en
+          }`}
         >
-          {button1}
+          {language === "fr" ? possibleAnswers[1].fr : possibleAnswers[1].en}
         </button>
         <button
           onClick={checkAnswer}
           className={`${
-            displayRightAnswer && button2 === country.fr ? "rightAnswer" : ""
+            displayRightAnswer && possibleAnswers[2] === country
+              ? "rightAnswer"
+              : ""
           } btn mb-20 flex-fill`}
-          value={button2}
+          value={`${
+            language === "fr" ? possibleAnswers[2].fr : possibleAnswers[2].en
+          }`}
         >
-          {button2}
+          {language === "fr" ? possibleAnswers[2].fr : possibleAnswers[2].en}
         </button>
       </div>
     </AnimationAnswers>

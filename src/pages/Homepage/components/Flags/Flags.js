@@ -6,7 +6,6 @@ import styles from "./Flags.module.scss";
 function Flags() {
   const animateFlags = useRecoilValue(animateFlagsState);
   const country = useRecoilValue(selectedCountryState);
-  console.log(country.en);
 
   return (
     <AnimationFlags in={animateFlags}>

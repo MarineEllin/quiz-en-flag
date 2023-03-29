@@ -37,8 +37,6 @@ function Timer() {
     };
   }, [timerProgress, setTimerProgress, addTimeRightAnswer]);
 
-  console.log(timerProgress);
-
   return (
     <div
       className={` ${styles.progressBarContainer} d-flex flex-column align-items-center`}

@@ -87,3 +87,10 @@ export const animateAnswersState = atom({
   key: "animateAnswersState",
   default: false,
 });
+
+// language
+
+export const languageState = atom({
+  key: "languageState",
+  default: "fr",
+});

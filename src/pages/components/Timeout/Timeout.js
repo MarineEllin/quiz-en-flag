@@ -1,10 +1,11 @@
 import { useRecoilValue, useSetRecoilState } from "recoil";
-import { loadingGameState, scoreState } from "recoilState/atom";
+import { languageState, loadingGameState, scoreState } from "recoilState/atom";
 import styles from "./Timeout.module.scss";
 
 function Timeout() {
   const score = useRecoilValue(scoreState);
   const setLoadingGame = useSetRecoilState(loadingGameState);
+  const language = useRecoilValue(languageState);
 
   return (
     <div
@@ -15,18 +16,20 @@ function Timeout() {
       >
         <span>Time Out !</span>
         <i className="fa-solid fa-face-sad-tear my-20"></i>
-        <span>Ne soyez pas triste...</span>
         <span>
-          vous avez quand même donné
+          {language === "fr" ? "Ne soyez pas triste..." : "Don't be sad..."}
+        </span>
+        <span>
+          {language === "fr" ? "vous avez quand même donné" : "you still have"}
           <span className="peps bold"> {score} </span>
-          bonnes réponses !!!
+          {language === "fr" ? "bonnes réponses !!!" : "good answers !!!"}
         </span>
       </div>
       <button
         onClick={() => setLoadingGame(true)}
         className="btn btn-reversed my-20"
       >
-        Nouvelle partie
+        {language === "fr" ? "Nouvelle partie" : "New game"}
       </button>
     </div>
   );

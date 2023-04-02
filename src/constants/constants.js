@@ -1,5 +1,5 @@
 export class Constants {
-  static TIMER_NEW_GAME = 500;
+  static TIMER_NEW_GAME = 200;
   static TIMER_RIGHT_ANSWER = 300;
   static TIMER_WRONG_ANSWER = 800;
   static TIMER_UPDATE = 1000;

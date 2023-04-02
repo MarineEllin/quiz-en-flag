@@ -30,11 +30,11 @@ function useStartNewGame() {
     setCountriesList([...countries].sort((a, b) => 0.5 - Math.random()));
     setTimeOutState(false);
     setAddTimeRightAnswer(false);
+    setTimer(Constants.TIMER_GAME_IN_MS);
     setTimeout(() => {
       setTimeOutState(false);
       setAnimateFlags(true);
       setAnimateAnswers(true);
-      setTimer(Constants.TIMER_GAME_IN_MS);
     }, Constants.TIMER_NEW_GAME);
   }
 

@@ -15,7 +15,6 @@ function Answers() {
   const animateAnswers = useRecoilValue(animateAnswersState);
   const displayRightAnswer = useRecoilValue(displayRightAnswerState);
   const language = useRecoilValue(languageState);
-
   const possibleAnswers = useRecoilValue(possibleAnswersState);
 
   return (

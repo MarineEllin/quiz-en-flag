@@ -38,7 +38,7 @@ export const countries = [
   { en: "Chile", fr: "Chili" },
   { en: "China", fr: "Chine" },
   { en: "Christmas Island", fr: "Île Christmas" },
-  { en: "Cocos Keeling Islands", fr: "Îles Cocos" },
+  { en: "Cocos (Keeling) Islands", fr: "Îles Cocos" },
   { en: "Colombia", fr: "Colombie" },
   { en: "Comoros", fr: "Comores" },
   { en: "Cook Islands", fr: "Îles Cook" },

@@ -6,7 +6,6 @@ import {
   animateFlagsState,
   countriesState,
   displayRightAnswerState,
-  languageState,
   scoreState,
   selectedCountryState,
 } from "recoilState/atom";
@@ -19,11 +18,10 @@ export function useCheckAnswer(e) {
   const [score, setScore] = useRecoilState(scoreState);
   const displayRightAnswer = useSetRecoilState(displayRightAnswerState);
   const setAddTimeRightAnswer = useSetRecoilState(addTimeRightAnswerState);
-  const language = useRecoilValue(languageState);
-
   function checkAnswer(e) {
     if (e.target.value === country.fr || e.target.value === country.en) {
       e.target.classList.add("rightAnswer");
+      e.currentTarget.disabled = true;
       setScore(score + 1);
       setAddTimeRightAnswer(true);
       setTimeout(() => {
@@ -40,6 +38,7 @@ export function useCheckAnswer(e) {
       }, Constants.TIMER_RIGHT_ANSWER + Constants.ANIMATION_FLAGS_IN_OUT + Constants.TIMEOUT_NEW_FLAG);
     } else {
       e.target.classList.add("wrongAnswer");
+      e.currentTarget.disabled = true;
       displayRightAnswer(true);
       setTimeout(() => {
         setAnimateFlags(false);

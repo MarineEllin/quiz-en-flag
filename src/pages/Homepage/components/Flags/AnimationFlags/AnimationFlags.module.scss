@@ -2,7 +2,7 @@
   transform: translateX(400px);
 }
 .enterActive {
-  transition: transform 500ms;
+  transition: transform 300ms;
   transform: translateX(0);
 }
 .enterDone {
@@ -14,7 +14,7 @@
 }
 .exitActive {
   transform: translateX(-400px);
-  transition: transform 500ms;
+  transition: transform 300ms;
 }
 .exitDone {
   transform: translateX(-400px);

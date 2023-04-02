@@ -35,7 +35,13 @@ function Timer() {
     return () => {
       clearTimeout(timeoutID);
     };
-  }, [timerProgress, setTimerProgress, addTimeRightAnswer]);
+  }, [
+    timerProgress,
+    setTimerProgress,
+    addTimeRightAnswer,
+    setAddTimeRightAnswer,
+    setTimeoutState,
+  ]);
 
   return (
     <div

@@ -8,9 +8,14 @@
     align-items: center;
     padding: 10px 0;
   }
+  .power {
+    color: var(--peps);
+    font-size: 2rem;
+    cursor: pointer;
+  }
 }
 .logo {
-  width: 410px;
+  width: 300px;
   @include mixin.xs {
     width: 150px;
     margin: 10px 0;

@@ -8,11 +8,11 @@
     max-width: 300px;
   }
   .heartContainer {
-    max-width: 250px;
-    max-height: 250px;
+    width: 250px;
+    height: 250px;
     @include mixin.xs {
-      max-width: 150px;
-      max-height: 150px;
+      width: 150px;
+      height: 150px;
     }
     img {
       max-width: 250px;
